@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoCall</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+    <main id="lobby-container">
+        <div id="form-container">
+            <div id="form__container__header">
+                <p>👋 Ishara - Video Calling Application Using Machine Learning</p>
+            </div>
+
+            <div id="form__content__wrapper">
+                <form id="join-form">
+                    <input type="text" name="invite_link" required/>
+                    <input type="submit" value="Join Room" />
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        let form = document.getElementById("join-form");
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let inviteCode = e.target.querySelector("input[type='text']").value;
+            console.log(inviteCode)
+             window.location = `call.html?room=${inviteCode}`
+
+        })
+    </script>
+</body>
+</html>

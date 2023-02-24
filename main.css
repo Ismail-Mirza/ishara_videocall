@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+.videos{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+.video-player{
+    background-color: black;
+    /* width:100%; */
+    height: 100%;
+    object-fit: cover;
+}
+.remote{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    display:relative;
+    
+}
+#user-2,#user-2-canvas{
+    display: none;
+}
+#user-2{
+    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    text-align:center;
+    z-index:9;
+}
+#user-2-canvas{
+    opacity: 0;
+    color: white;
+    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    text-align:center;
+    z-index:10;
+}
+.text-output{
+    display:none;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    height: 20px;
+    width: 280px;
+    padding: 10px;
+    border-radius: 5px;
+    border:2px solid #b366f9;
+    background: #dbdadb;
+    -webkit-box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    z-index: 999;
+}
+
+.smallFrame{
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    height: 170px;
+    width: 300px;
+    border-radius: 5px;
+    border:2px solid #b366f9;
+    -webkit-box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    z-index: 999;
+}
+
+
+#controls{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform:translateX(-50%);
+    display: flex;
+    gap: 1em;
+}
+
+
+.control-container{
+  background-color: rgb(179, 102, 249, .9);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-container img{
+    height: 30px;
+    width: 30px;
+}
+
+#leave-btn{
+    background-color: rgb(255,80,80, 1);
+}
+
+@media screen and (max-width:600px) {
+        .smallFrame{
+            height: 80px;
+            width: 120px;
+        }
+
+        .control-container img{
+            height: 20px;
+            width: 20px;
+        }
+}

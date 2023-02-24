@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoCall</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="videos">
+        <video class="video-player" id="user-1" autoplay playsinline>
+
+        </video>
+        <div class="remote">
+            <video class="video-player" id="user-2" autoplay playsinline></video>
+            <canvas class="video-player" id="user-2-canvas"></canvas>
+            <div class="text-output"></div>
+        </div>
+    </div>
+    <div id="controls">
+
+        <div class="control-container" id="camera-btn">
+            <img src="icons/camera.png" />
+        </div>
+
+        <div class="control-container" id="mic-btn">
+            <img src="icons/mic.png" />
+        </div>
+
+        <a href="index.html">
+            <div class="control-container" id="leave-btn">
+                <img src="icons/phone.png" />
+            </div>
+        </a>
+
+    </div>
+    <script src="tf.js"></script>
+    <script src="agora-rtm-sdk-1.4.4.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
